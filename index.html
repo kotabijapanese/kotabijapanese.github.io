@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kotabi Japanese · Belajar bahasa Jepang dari anime</title>
+<meta name="description" content="Komunitas belajar bahasa Jepang di Discord: kalimat asli dari anime, silabus N5 sampai N1, kamus berbahasa Indonesia, dan ujian gelar. Gratis sampai N5.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kotabi Japanese · Belajar bahasa Jepang dari anime">
+<meta property="og:description" content="Kalimat asli dari anime, silabus N5 sampai N1, kamus berbahasa Indonesia. Gratis sampai N5.">
+<meta property="og:image" content="https://kotabijapanese.github.io/og.png">
+<meta property="og:url" content="https://kotabijapanese.github.io/">
+<meta name="theme-color" content="#222122">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FFDA56'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='40' font-weight='800' text-anchor='middle' fill='%23222122'%3Ek%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+JP:wght@500;700&display=swap">
+<style>
+:root {
+  --bg: #FEFDF2; --grid: #EDF0F4; --ink: #222122; --muted: #6B6862; --yel: #FFDA56;
+  --card: #FFFFFF; --line: #222122; --soft: #F4F2E6; --partikel: #D6E0EA;
+  --band: #222122; --band-ink: #FEFDF2; --band-muted: #A8A49B;
+  --badge-bg: #222122; --badge-fg: #FFDA56;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #222122; --grid: #2B2A2B; --ink: #FEFDF2; --muted: #A8A49B;
+    --card: #2B2A2B; --line: #4A4848; --soft: #2B2A2B; --partikel: #3A4654;
+    --band: #FFDA56; --band-ink: #222122; --band-muted: #4A4636;
+    --badge-bg: #FFDA56; --badge-fg: #222122;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background-color: var(--bg); color: var(--ink);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 44px 44px;
+  font: 500 17px/1.6 "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.jp { font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
+a { color: inherit; }
+h1, h2, h3 { line-height: 1.2; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); font-weight: 800; letter-spacing: -0.01em; }
+h3 { font-size: 1.15rem; font-weight: 800; }
+p { margin: 0; }
+mark { background: linear-gradient(transparent 55%, var(--yel) 55%, var(--yel) 92%, transparent 92%); color: inherit; padding: 0 .08em; }
+@media (prefers-color-scheme: dark) { mark { background: none; color: var(--yel); } }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; background: var(--soft); border: 1px solid var(--line); border-radius: 6px; padding: .05em .35em; }
+.label { display: inline-block; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  background: var(--ink); color: var(--bg); border-radius: 999px; padding: .35em 1em; }
+.muted { color: var(--muted); }
+section { padding-block: 72px; }
+.section-head { display: grid; gap: 12px; margin-bottom: 36px; max-width: 46rem; }
+
+/* tombol */
+.btn { display: inline-flex; align-items: center; gap: .5em; font-weight: 800; text-decoration: none; border-radius: 999px;
+  padding: .85em 1.5em; border: 2px solid var(--line); transition: transform .12s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn-main { background: var(--yel); color: #222122; border-color: #222122; }
+.btn-ghost { background: var(--card); color: var(--ink); }
+
+/* header */
+header { padding-block: 18px; }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.logo { font-weight: 800; font-size: 1.6rem; letter-spacing: -0.03em; text-decoration: none;
+  background: linear-gradient(transparent 58%, var(--yel) 58%, var(--yel) 90%, transparent 90%); padding: 0 .1em; }
+@media (prefers-color-scheme: dark) { .logo { background: none; color: var(--yel); } }
+.nav-links { display: flex; gap: 20px; flex-wrap: wrap; font-weight: 700; font-size: .95rem; }
+.nav-links a { text-decoration: none; }
+@media (max-width: 560px) { .nav-links { display: none; } }
+.nav-links a:hover { text-decoration: underline; text-decoration-color: var(--yel); text-decoration-thickness: 3px; }
+
+/* hero */
+.hero { padding-block: 40px 72px; display: grid; gap: 40px; align-items: center; }
+@media (min-width: 900px) { .hero { grid-template-columns: 1.1fr .9fr; } }
+.hero-text { display: grid; gap: 22px; justify-items: start; }
+.hero-text p { font-size: 1.15rem; max-width: 34rem; }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.card { background: var(--card); border: 2px solid var(--line); border-radius: 22px; padding: 26px; min-width: 0; }
+.bedah { display: grid; gap: 10px; box-shadow: 8px 8px 0 var(--yel); }
+.bedah .kalimat { font-size: clamp(1.7rem, 4.5vw, 2.2rem); font-weight: 700; }
+.bedah .sumber { font-size: .85rem; font-weight: 700; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chip { display: grid; justify-items: center; gap: 2px; }
+.chip b { font-family: "Noto Sans JP", sans-serif; font-size: 1.25rem; font-weight: 700; border: 2px solid var(--line);
+  border-radius: 10px; padding: .1em .4em; background: var(--card); }
+.chip.partikel b { background: var(--partikel); }
+.chip.pola b { background: var(--yel); color: #222122; border-color: #222122; }
+.chip small { font-size: .72rem; font-weight: 700; color: var(--muted); }
+.bedah .ket { font-size: .9rem; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 12px; margin-top: 6px; }
+
+/* angka */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.stat { background: var(--card); border: 2px solid var(--line); border-radius: 18px; padding: 20px; }
+.stat strong { display: block; font-size: 2rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--muted); font-size: .95rem; }
+.catatan { margin-top: 12px; font-size: .85rem; color: var(--muted); }
+
+/* pilar */
+.pilar { display: grid; gap: 20px; }
+@media (min-width: 860px) { .pilar { grid-template-columns: repeat(3, 1fr); } }
+.pilar .card { display: grid; gap: 12px; align-content: start; }
+.nomor { width: 44px; height: 44px; border-radius: 50%; background: var(--badge-bg); color: var(--badge-fg); display: grid;
+  place-items: center; font-weight: 800; font-size: 1.2rem; }
+ul.titik { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+ul.titik li { position: relative; padding-left: 22px; }
+ul.titik li::before { content: ""; position: absolute; left: 0; top: .55em; width: 10px; height: 10px; border-radius: 3px; background: var(--yel); border: 2px solid var(--line); }
+
+/* langkah */
+.langkah { display: grid; gap: 16px; counter-reset: l; }
+@media (min-width: 860px) { .langkah { grid-template-columns: repeat(3, 1fr); } }
+.langkah .card { display: grid; gap: 8px; align-content: start; }
+.langkah .card::before { counter-increment: l; content: counter(l); width: 52px; height: 52px; border-radius: 50%;
+  background: var(--badge-bg); color: var(--badge-fg); display: grid; place-items: center; font-weight: 800; font-size: 1.5rem; }
+
+/* gratis vs member */
+.paket { display: grid; gap: 20px; }
+@media (min-width: 760px) { .paket { grid-template-columns: 1fr 1fr; } }
+.paket .card { display: grid; gap: 14px; align-content: start; }
+.paket .member { box-shadow: 8px 8px 0 var(--yel); }
+
+/* FAQ */
+.faq { display: grid; gap: 12px; max-width: 52rem; }
+details { background: var(--card); border: 2px solid var(--line); border-radius: 16px; padding: 4px 20px; }
+summary { cursor: pointer; font-weight: 800; padding-block: 14px; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-size: 1.4rem; line-height: 1; }
+details[open] summary::after { content: "−"; }
+details > div { padding-bottom: 16px; display: grid; gap: 8px; }
+
+/* ketentuan */
+.ketentuan { columns: 2 320px; column-gap: 40px; background: var(--card); border: 2px solid var(--line); border-radius: 22px; padding: 28px; }
+.ketentuan h3 { break-after: avoid; margin: 18px 0 8px; font-size: 1.05rem; }
+.ketentuan h3:first-of-type { margin-top: 10px; }
+.ketentuan ul, .ketentuan ol { margin: 0; padding-left: 1.3em; break-inside: avoid; }
+.ketentuan ol { padding-left: 2.6em; }
+.ketentuan li { margin-bottom: 4px; }
+.ketentuan li small, .ketentuan .kecil { display: block; color: var(--muted); font-size: .85rem; }
+.ketentuan p { margin-top: 14px; break-inside: avoid; }
+
+/* ajakan akhir */
+.band { background: var(--band); color: var(--band-ink); border-radius: 28px; padding: 48px 28px; text-align: center; display: grid; gap: 18px; justify-items: center; }
+.band p { color: var(--band-muted); }
+.band .btn-main { border-color: var(--band-ink); }
+.band code { background: transparent; border-color: var(--band-muted); color: var(--band-ink); }
+
+footer { padding-block: 40px 56px; font-size: .9rem; color: var(--muted); display: grid; gap: 10px; }
+footer .sosmed { display: flex; gap: 18px; flex-wrap: wrap; font-weight: 700; color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <nav class="nav" aria-label="Utama">
+    <a class="logo" href="#"><span>k</span>otabi</a>
+    <div class="nav-links">
+      <a href="#kenapa">Kenapa Kotabi</a>
+      <a href="#mulai">Cara mulai</a>
+      <a href="#faq">Tanya jawab</a>
+      <a href="#ketentuan">Ketentuan</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<div class="hero">
+  <div class="hero-text">
+    <span class="label">Komunitas belajar bahasa Jepang</span>
+    <h1>Belajar bahasa Jepang dari <mark>anime</mark> yang kamu tonton.</h1>
+    <p>Kalimat asli dari anime, silabus berurutan dari nol sampai N1, dan kamus berbahasa Indonesia. Semuanya di satu server Discord, bareng teman belajar.</p>
+    <div class="cta-row">
+      <a class="btn btn-main" href="https://discord.gg/cxHhQbK275">Gabung gratis di Discord</a>
+      <a class="btn btn-ghost" href="#mulai">Cara mulai</a>
+    </div>
+    <p class="muted" style="font-size:.95rem">Gratis sampai N5. Tanpa kartu kredit.</p>
+  </div>
+
+  <figure class="card bedah" style="margin:0" aria-label="Contoh fitur Bedah">
+    <span class="sumber">🎬 Sousou no Frieren · Ep. 6</span>
+    <span class="kalimat jp">楽しい旅がしたいんだ</span>
+    <span>“Aku ingin perjalanan yang menyenangkan.”</span>
+    <div class="chips" aria-label="Kalimat dipotong per kata dan pola">
+      <span class="chip"><b>楽しい</b><small>kata</small></span>
+      <span class="chip"><b>旅</b><small>kata</small></span>
+      <span class="chip partikel"><b>が</b><small>partikel</small></span>
+      <span class="chip"><b>し</b><small>kata</small></span>
+      <span class="chip pola"><b>たい</b><small>pola</small></span>
+      <span class="chip pola"><b>んだ</b><small>pola</small></span>
+    </div>
+    <figcaption class="ket">🔍 <strong>Bedah</strong>: tiap kalimat dipotong per kata dan pola grammar, lalu bisa dibuka di kamus.</figcaption>
+  </figure>
+</div>
+
+<div class="stats" aria-label="Kotabi dalam angka">
+  <div class="stat"><strong>600 ribu+</strong><span>kalimat asli dari anime</span></div>
+  <div class="stat"><strong>1.547</strong><span>episode dari 64 judul anime</span></div>
+  <div class="stat"><strong>10.650</strong><span>kata dengan arti bahasa Indonesia</span></div>
+  <div class="stat"><strong>632</strong><span>pola grammar N5–N1</span></div>
+</div>
+<p class="catatan">Angka per Oktober 2026, terus bertambah.</p>
+
+<section id="kenapa">
+  <div class="section-head">
+    <span class="label" style="justify-self:start">Kenapa Kotabi</span>
+    <h2>Tiga hal yang bikin belajar lebih awet</h2>
+  </div>
+  <div class="pilar">
+    <article class="card">
+      <span class="nomor">1</span>
+      <h3>Kalimat asli dari anime</h3>
+      <p>Cari satu kata, langsung muncul adegan anime yang memakainya, lengkap dengan judul, episode, dan menitnya.</p>
+      <ul class="titik">
+        <li>Belajar dari cara orang Jepang benar-benar bicara</li>
+        <li>Bedah: tiap kalimat dipotong per kata dan pola</li>
+      </ul>
+    </article>
+    <article class="card">
+      <span class="nomor">2</span>
+      <h3>Belajar bareng, ada gelarnya</h3>
+      <p>Naik gelar lewat ujian, dari <strong>Commoner</strong> sampai <strong>Emperor</strong>. Ada 16 gelar.</p>
+      <ul class="titik">
+        <li>Silabus berurutan dari N5 sampai N1</li>
+        <li>Kuis dan latihan tiap hari</li>
+        <li>Catat waktu belajarmu dengan <code>/log</code></li>
+      </ul>
+    </article>
+    <article class="card">
+      <span class="nomor">3</span>
+      <h3>Dikurasi untuk orang Indonesia</h3>
+      <p>Arti kata dan contoh kalimat ditulis dalam bahasa Indonesia, lalu terus diperiksa dan diperbaiki.</p>
+      <ul class="titik">
+        <li>Kamus kata, kanji, dan pola grammar</li>
+        <li>Ada yang keliru? Tekan ⚠️, kami perbaiki</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="mulai">
+  <div class="section-head">
+    <span class="label" style="justify-self:start">Cara mulai</span>
+    <h2>Mulai dalam 3 langkah</h2>
+  </div>
+  <div class="langkah">
+    <div class="card"><h3>Instal Discord</h3><p class="muted">Gratis, di HP atau laptop.</p></div>
+    <div class="card"><h3>Gabung server Kotabi</h3><p class="muted">Lewat tombol <a href="https://discord.gg/cxHhQbK275">Gabung di Discord</a>.</p></div>
+    <div class="card"><h3>Ketik <code>/silabus</code></h3><p class="muted">Bot menunjukkan langkah pertamamu. Belum hafal kana? Mulai dari Pengenalan.</p></div>
+  </div>
+
+  <h3 style="margin-top:44px;margin-bottom:16px;font-size:1.4rem">Gratis sampai N5</h3>
+  <div class="paket">
+    <div class="card">
+      <h3>Gratis untuk semua</h3>
+      <ul class="titik">
+        <li>Silabus Pengenalan dan N5 lengkap</li>
+        <li>Kuis, latihan, dan catatan belajar <code>/log</code></li>
+        <li>Kamus dengan 10 detail kata per hari</li>
+        <li>Ujian gelar sampai N5</li>
+      </ul>
+    </div>
+    <div class="card member">
+      <h3>Member</h3>
+      <ul class="titik">
+        <li>Silabus N4 sampai N1 lengkap</li>
+        <li>Kamus tanpa batas</li>
+        <li>Ujian gelar sampai puncak</li>
+        <li>Ruang khusus member</li>
+      </ul>
+      <p class="muted" style="font-size:.95rem">Paket dan harga terbaru: ketik <code>/info member-reguler</code> di server. Mau coba dulu? <code>/trial</code> 5 hari (akun Discord minimal 3 hari).</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="section-head">
+    <span class="label" style="justify-self:start">Tanya jawab</span>
+    <h2>Pertanyaan yang sering muncul</h2>
+  </div>
+  <div class="faq">
+    <details>
+      <summary>Kenapa di Discord, bukan aplikasi sendiri?</summary>
+      <div>
+        <p>Belajar bahasa lebih awet kalau ada temannya. Di Discord, kuis, kamus, silabus, dan obrolan ada di satu tempat.</p>
+        <p class="muted">Discord gratis dan bisa dipakai di HP maupun laptop.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Apa bedanya dengan belajar sendiri dari internet?</summary>
+      <div>
+        <ul class="titik">
+          <li>Silabus berurutan dari nol sampai N1, jadi jelas mulai dari mana.</li>
+          <li>Kamus berbahasa Indonesia yang dikurasi dan terus diperbaiki.</li>
+          <li>Contoh kalimat asli dari anime, lengkap dengan judul dan episodenya.</li>
+          <li>Ujian gelar dan teman belajar yang bikin tetap semangat.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Saya pemula total, bisa ikut?</summary>
+      <div><p>Bisa. Mulai dari unit <strong>Pengenalan</strong> di <code>/silabus</code>. Di situ kamu belajar hiragana dan katakana dulu.</p></div>
+    </details>
+    <details>
+      <summary>Pembayarannya aman?</summary>
+      <div>
+        <ul class="titik">
+          <li>Bayar hanya ke QRIS atau rekening yang ditampilkan bot saat <code>/subscribe</code>.</li>
+          <li>Setiap order tercatat dan bisa dicek lewat <code>/my_orders</code>.</li>
+          <li>Staff tidak pernah meminta transfer lewat DM pribadi.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Kalau ternyata tidak cocok?</summary>
+      <div>
+        <p>Coba dulu gratis: silabus N5 lengkap dan <code>/trial</code>. Langganan bulanan bisa berhenti kapan saja, cukup tidak diperpanjang.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section id="ketentuan">
+  <div class="section-head">
+    <span class="label" style="justify-self:start">Ketentuan</span>
+    <h2>Ketentuan Membership</h2>
+    <p class="muted">Sama dengan <code>/info ketentuan</code> di server. Versi di server selalu yang terbaru.</p>
+  </div>
+  <div class="ketentuan">
+<!-- KETENTUAN:MULAI — salinan Msg.KETENTUAN_ISI (kotabi-bot shared/messages.py); ubah bersama -->
+<p class="kecil">Berlaku untuk pembelian lewat <code>/subscribe</code> · versi 9 Oktober 2026</p>
+<h3>Pembayaran</h3>
+<ul>
+<li>Bayar hanya ke QRIS/rekening yang ditampilkan bot.</li>
+<li>Staff tidak pernah meminta transfer lewat DM pribadi.</li>
+<li>Transfer ke tempat lain tidak bisa kami proses.</li>
+<li>Akses aktif setelah staff memverifikasi pembayaranmu.</li>
+</ul>
+<h3>Pengembalian dana</h3>
+<ul>
+<li>Setelah akses aktif, uang tidak dikembalikan.<small>Coba dulu gratis: silabus N5 dan <code>/trial</code>.</small></li>
+<li>Kalau ada kesalahan teknis, uangmu kembali:</li>
+</ul>
+<ol>
+<li>Bayar dobel atau lebih: kelebihannya dikembalikan.</li>
+<li>Akses belum aktif 3×24 jam karena salah kami: uang kembali penuh.<small>Ajukan ke staff dengan bukti bayar, maks. 30 hari setelah transfer.</small></li>
+</ol>
+<h3>Companion</h3>
+<ul>
+<li>Berhenti kapan saja: cukup tidak memperpanjang.</li>
+<li>Sisa masa aktif tetap berjalan dan tidak bisa diuangkan.</li>
+<li>Kalau harga naik, masa yang sudah dibayar tidak terpengaruh.</li>
+</ul>
+<h3>Patron</h3>
+<ul>
+<li>"Seumur hidup" berarti selama Kotabi beroperasi.</li>
+<li>Semua keuntungan Companion, termasuk fitur baru.</li>
+<li>Fitur hanya diganti kalau ada pengganti yang setara.</li>
+<li>Produk terpisah seperti kelas intensif tidak termasuk.</li>
+</ul>
+<h3>Pelanggaran</h3>
+<ul>
+<li>Curang ujian, menyalin materi massal, atau melanggar aturan server.</li>
+<li>Akibatnya: akses dicabut tanpa pengembalian dana.</li>
+</ul>
+<h3>Lain-lain</h3>
+<ul>
+<li>Kotabi membantu belajar, tetapi tidak menjamin lulus JLPT.</li>
+<li>Kotabi berjalan di Discord. Gangguan Discord di luar kendali kami.</li>
+<li>Ketentuan bisa diperbarui dan akan diumumkan di server.<small>Pembelian yang sudah terjadi mengikuti ketentuan saat itu.</small></li>
+<li>Kalau layanan berakhir, kamu dikabari minimal 30 hari sebelumnya.<small>Penjualan dihentikan sejak itu; uang yang masuk tidak dikembalikan.</small></li>
+</ul>
+<p>Dengan membeli lewat <code>/subscribe</code>, kamu menyetujui ketentuan ini.</p>
+<p class="kecil">Ada pertanyaan? Hubungi staff.</p>
+<!-- KETENTUAN:SELESAI -->
+  </div>
+</section>
+
+<section>
+  <div class="band">
+    <h2>Siap mulai?</h2>
+    <p>Gabung server Kotabi, ketik <code>/silabus</code>, dan mulai dari N5. Gratis.</p>
+    <a class="btn btn-main" href="https://discord.gg/cxHhQbK275">Gabung gratis di Discord</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="sosmed">
+    <a href="https://www.instagram.com/kotabijapanese/">Instagram</a>
+    <a href="https://www.tiktok.com/@kotabijapanese">TikTok</a>
+  </div>
+  <p>Kotabi Japanese tidak berafiliasi dengan studio atau pemegang hak anime mana pun. Kutipan dialog dipakai sebatas untuk belajar, selalu dengan judul dan episode sumbernya.</p>
+  <p>© 2026 Kotabi Japanese.</p>
+</footer>
+
+</div>
+</body>
+</html>
