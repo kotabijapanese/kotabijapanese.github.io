@@ -391,13 +391,31 @@ footer .sosmed { display: flex; gap: 18px; flex-wrap: wrap; font-weight: 700; co
 
 <footer>
   <div class="sosmed">
-    <a href="https://www.instagram.com/kotabijapanese/">Instagram</a>
-    <a href="https://www.tiktok.com/@kotabijapanese">TikTok</a>
+    <a href="https://instagram.com/kotabijapanese">Instagram</a>
+    <a href="https://tiktok.com/@kotabijapanese">TikTok</a>
+    <a href="https://youtube.com/@kotabijapanese">YouTube</a>
+    <a href="https://threads.com/@kotabijapanese">Threads</a>
+    <a href="https://facebook.com/kotabijapanese">Facebook</a>
+    <a href="https://x.com/kotabijapanese">X</a>
   </div>
   <p>Kotabi Japanese tidak berafiliasi dengan studio atau pemegang hak anime mana pun. Kutipan dialog dipakai sebatas untuk belajar, selalu dengan judul dan episode sumbernya.</p>
   <p>© 2026 Kotabi Japanese.</p>
 </footer>
 
 </div>
+<script>
+/* Link bio tiap platform menuju web dengan ?dari=…; tombol "Gabung" memakai link undangan platform itu,
+   supaya jumlah anggota per platform tetap terlihat di Discord. Tanpa ?dari=: link web bawaan. */
+(function () {
+  var UNDANGAN = { ig: "kvgwzvt7PR", tiktok: "hrfbNYqnsG", yt: "nBaEnEjR3r", threads: "QAjAM4QBj9",
+                   fb: "yCAxjQBV2z", x: "BqsnuC6n48" };
+  var dari = new URLSearchParams(window.location.search).get("dari");
+  var kode = dari && Object.prototype.hasOwnProperty.call(UNDANGAN, dari) ? UNDANGAN[dari] : null;
+  if (!kode) return;
+  document.querySelectorAll('a[href^="https://discord.gg/"]').forEach(function (a) {
+    a.href = "https://discord.gg/" + kode;
+  });
+})();
+</script>
 </body>
 </html>
